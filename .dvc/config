@@ -1,0 +1,4 @@
+['remote "myremote"']
+url = s3://dvc-ds-env
+[core]
+remote = myremote
