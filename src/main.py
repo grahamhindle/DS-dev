@@ -1,7 +1,6 @@
-import pandas as pd
+
 import numpy as np
 import matplotlib.pyplot as plt
-from matrix_helpers import inverse_of_matrix
 import file_helpers as fh
 import linear_regression as lr
 import lr_scikit as lrs
@@ -43,7 +42,7 @@ plt.ylabel('SalePrice')
 plt.legend()
 plt.show()
 
-#calculate rmse
+# calculate rmse
 rmse = 0
 
 b0 = weights[0][0]
@@ -55,7 +54,7 @@ for i in range(len(Y)):
 rmse = np.sqrt(rmse/len(Y))
 print(rmse)
 
-#calculate R^^2
+# calculate R^^2
 ss_t = 0
 ss_r = 0
 
