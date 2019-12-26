@@ -21,6 +21,7 @@ def read_to_df(file_path):
         assert isinstance(df, object)
         return df
 
+
 def select_columns(data_frame, column_names):
     """Return a subset of a data frame by column names.
 
@@ -42,6 +43,7 @@ def select_columns(data_frame, column_names):
             return data_frame[column_names].copy(deep=True)  # deep copy to enable modification
     except:
         pass
+
 
 def column_cutoff(data_frame, cutoffs):
     """Subset data frame by cutting off limits on column values.
@@ -67,8 +69,8 @@ def column_cutoff(data_frame, cutoffs):
             min_value = float(cutoffs[x][1])  # extract minimum value
             max_value = float(cutoffs[x][2])  # extract maximum value
             index_names.extend(dftemp[(dftemp[column_name] < min_value) |
-                                      (dftemp[
-                                           column_name] > max_value)].index)  # create index of all values that meet condition
+                                      (dftemp[column_name] > max_value)].index)  # create index of all values that
+            # meet condition
         dftemp.drop(index_names, inplace=True)
 
     return dftemp
